@@ -14,8 +14,6 @@ documentation = "https://docs.rs/dbus-client"
 
 [dependencies]
 dbus = { version = "0.9.7", features = [] }
-forr.path = "../forr"
-# dbus.path = "../dbus-rs/dbus"
 dbus-client-macros = { version = "0.1.0", path = "dbus-client-macros" }
 
 [package.metadata.docs.rs]
