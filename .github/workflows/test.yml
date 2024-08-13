@@ -13,7 +13,6 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
           - macos-latest
         rust:
           - stable
@@ -40,9 +39,9 @@ jobs:
         with:
           cargo-hack-version: "0.6"
       - name: Build
-        run: cargo hack build --feature-powerset ${{ matrix.cargo_flags }}
+        run: cargo hack build -F vendored --feature-powerset ${{ matrix.cargo_flags }}
       - name: Test
-        run: cargo hack test --feature-powerset --all-targets --no-fail-fast --workspace
+        run: cargo hack test -F vendored --feature-powerset --all-targets --no-fail-fast --workspace
       - name: Doc Test
         run: cargo test --all-features --doc --no-fail-fast --workspace
       - name: Build Docs

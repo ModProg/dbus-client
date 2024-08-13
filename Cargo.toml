@@ -16,6 +16,9 @@ documentation = "https://docs.rs/dbus-client"
 dbus = { version = "0.9.7", features = [] }
 dbus-client-macros = { version = "0.1.0", path = "dbus-client-macros" }
 
+[features]
+vendored = ["dbus/vendored"]
+
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
